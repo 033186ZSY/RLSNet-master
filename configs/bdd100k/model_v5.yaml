@@ -1,0 +1,45 @@
+cudnn : 
+  benchmark : True
+  deterministic : False 
+  enabled : True
+
+dataset :
+  root : '/workspace/xiaozhihao/BiSeNet/BDD100K'
+  pretrained_model_path : None
+  save_model_path : '/workspace/xiaozhihao/RLSnet/checkpoint_of_XZH/'
+
+train :
+  num_epochs : 50
+  epoch_start_i : 0
+  checkpoint_step : 1
+  validation_step : 1
+  learning_rate : 0.01
+  crop_height : 720
+  crop_width : 1280
+  ratio : 1
+  num_workers : 4
+  batch_size : 1
+  use_gpu : True
+  cuda : 0
+  note : ''
+  flip : true
+  # multi_scale: true
+  # scale_factor: 16
+
+loss :
+  optimizer : 'sgd'
+  ignore_label : 255
+  drivable_loss : 'crossentropy'
+  lane_loss : 'ohem'
+  scenes_loss : 'crossentropy'
+
+model :
+  version : 'model_v5'
+  # backbone : '50'
+  use_psa : True
+  num_workers : 12
+  road_classes : 3
+  lane_classes : 10
+  scenes_classes : 4
+
+# Cudnn related params
