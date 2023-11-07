@@ -1,1 +1,4 @@
 # RLSNet-master
+BDD100K里面放置数据集
+checkpoint_of_XZH里面放置已经训练的权重
+resnet_pretrained_pth里面存放resnet网络的预训练权重
